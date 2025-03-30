@@ -26,4 +26,4 @@ jobs:
     name: job-four 
     runs-on: ubuntu-latest
     steps:
-      -run: date
+      - run: date
