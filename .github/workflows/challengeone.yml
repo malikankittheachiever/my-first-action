@@ -1,4 +1,4 @@
-name: chanllenge1
+name: challenge1
 
 on: push
 
@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Print date on windows
-        run: "GetDate"
+        run: "Get-Date"
 
   jobs3:    
     name: job-three
