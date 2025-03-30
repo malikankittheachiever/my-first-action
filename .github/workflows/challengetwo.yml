@@ -6,17 +6,17 @@ env:
   ARTIFACT_NAME: "artifactv1"  
 
 jobs:
-  name: "Upload and Download artifacts"
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v1
+  upload-download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
 
-    - name: Run a script
-      run: echo "Upload artifact" > "upload.txt"
+      - name: Run a script
+        run: echo "Upload artifact" > "upload.txt"
 
-    - name: Upload artifact
-      run: actions/upload-artifact@v1
-      with:
-        name: ${ARTIFACT_NAME}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${ARTIFACT_NAME}
 
