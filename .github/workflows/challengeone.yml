@@ -7,27 +7,27 @@ jobs:
     name: job-one
     runs-on: ubuntu-latest
     steps:
-      -name: Print date on ubuntu
-       run: date
+      - name: Print date on ubuntu
+        run: date
 
   jobs2:    
     name: job-two
     runs-on: windows-latest
     steps:
-      -name: Print date on windows
-       run: "GetDate"
+      - name: Print date on windows
+        run: "GetDate"
 
   jobs3:    
     name: job-three
     runs-on: macos-latest
     steps:
-      -name: Print date on macos
-       run: date
+      - name: Print date on macos
+        run: date
 
   jobs4:    
     name: job-four 
     runs-on: ubuntu-latest
     steps:
-      -name: Print date on ubuntu
-       run: date
+      - name: Print date on ubuntu
+        run: date
     needs: [jobs1, jobs2, jobs3]
